@@ -1,0 +1,18 @@
+{
+  "systemSetup": [],
+  "templateName": "custom",
+  "projectDependencies": [
+    { "name": "Install Dependencies", "command": "npm install" }
+  ],
+  "codeChecks": [],
+  "buildSteps": [],
+  "runStep": [
+    { "name": "Run Dev Server", "command": "PORT=3000 npm run dev", "port": "3000" }
+  ],
+  "deploySteps": [
+    { "name": "Start Server", "command": "PORT=3000 npm start" }
+  ],
+  "cleanupFiles": ["node_modules", "ddos.db", "ddos.db-shm", "ddos.db-wal", ".env"],
+  "packageManager": "npm",
+  "envPaths": [{ "name": "default", "path": ".env" }]
+}
