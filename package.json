@@ -1,12 +1,12 @@
 {
-  "name": "ddos-protection-dashboard",
-  "version": "2.0.0",
-  "description": "Real-time DDoS protection system with secure authentication",
+  "name": "ddos-protection-enterprise",
+  "version": "3.0.0",
+  "description": "Enterprise DDoS Protection System with ML threat scoring, multi-layer defense, and real-time monitoring",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "node test-server.js",
-    "dev": "node app.js"
+    "start": "node --expose-gc app.js",
+    "dev": "node --expose-gc app.js",
+    "test": "node test-server.js"
   },
   "keywords": [
     "ddos",
@@ -15,7 +15,10 @@
     "iptables",
     "firewall",
     "monitoring",
-    "real-time"
+    "real-time",
+    "machine-learning",
+    "threat-intelligence",
+    "enterprise"
   ],
   "author": "",
   "license": "MIT",
@@ -26,9 +29,14 @@
     "express": "^5.2.1",
     "express-rate-limit": "^7.1.5",
     "jsonwebtoken": "^9.0.2",
-    "socket.io": "^4.8.3"
+    "maxmind": "^4.3.11",
+    "nodemailer": "^6.9.8",
+    "otplib": "^12.0.1",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.8.3",
+    "uuid": "^9.0.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   }
 }
